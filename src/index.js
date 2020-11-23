@@ -1,9 +1,6 @@
-const add = (a, b) => a + b;
+//import { add } from "/calculation";
+//console.log(add(2, 2));
 
-// const add = (a, b) => {
-//   return a + b;
-// }
-
-// const add = (a, b) => a + b
-
-console.log(add(1, 2));
+import * as cal from "/calculation";
+console.log(cal.add(2, 2));
+console.log(cal.multiply(2, 3));
