@@ -1,13 +1,12 @@
-const studentA = {
-  name: "A",
-  score: 100
-};
+function simulateAsyncAPI(text, time, callback) {
+  setTimeout(() => {
+    console.log(text);
+    callback();
+  }, time);
+}
 
-//const name = studentA.name;
-//const score = studentA.score;
-
-//const { name, score } = studentA;
-const { name, score: myscore } = studentA;
-
-console.log(`${name} : ${myscore}`);
-//console.log(`${name} : ${myScore}`);
+simulateAsyncAPI("A", 1000, () => {
+  simulateAsyncAPI("B", 500, () => {
+    simulateAsyncAPI("C", 100, () => {});
+  });
+});
